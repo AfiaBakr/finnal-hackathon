@@ -12,11 +12,11 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+
 
 const CartPage = () => {
     const [cartItems, setCartItems] = useState<Food[]>([]);
-    const router = useRouter();
+  
     
     useEffect(() => {
       setCartItems(getCartItems());
@@ -170,12 +170,13 @@ const CartPage = () => {
               ${calculateTotal().toFixed(2)}
             </p>
           </div>
-          <button
-             onClick={(handleProceed) => router.push('/checkout')}
+          <Link href={'/checkout'}><button
+            onClick={handleProceed} //=> router.push('/checkout')}
             className="mt-4 w-full px-4 py-2 bg-[#ff9f0d] text-black rounded-md hover:bg-[#e2b46f]"
           >
             Proceed to check Out
           </button>
+          </Link>
           <Link href={"/menu"}><button       
             className="mt-4 w-full px-4 py-2 bg-[#ff9f0d] text-black rounded-md hover:bg-[#e2b46f]"
           >
