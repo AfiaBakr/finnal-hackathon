@@ -1,4 +1,4 @@
-import react  from "react";
+
 import Image from "next/image";
 import { IoPlayOutline } from "react-icons/io5";
 import { MdKeyboardArrowRight } from "react-icons/md";
