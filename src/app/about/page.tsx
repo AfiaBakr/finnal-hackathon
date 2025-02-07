@@ -1,6 +1,6 @@
 "use client"
 
-import react from "react";
+
 
 import Abouted from "../Components/Abouted";
 import TeamMember from "../Components/TeamMember";
