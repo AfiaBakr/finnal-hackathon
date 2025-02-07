@@ -29,7 +29,7 @@ export default async function FoodCards() {
   
 
     const foods: FoodItem[] = 
-    response.data?.map((foodname: any) => ({
+    response.data?.map((foodname: FoodItem) => ({
         _id: foodname._id,
         name: foodname.name,
         slug: foodname.slug,
