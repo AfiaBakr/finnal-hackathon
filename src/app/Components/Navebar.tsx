@@ -56,11 +56,7 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
-          {/* Cart link for mobile view */}
-          <li className="md:hidden block px-4">
-            
-            <Link href="/cart" className="text-[16px] leading-6 text-white font-inter hover:text-[#FF9F0D] transition-colors">Cart</Link>
-          </li>
+          
           {/* Sign In link for mobile view */}
           <li className="md:hidden block px-4">
             <Link href="/signin" className="text-[16px] leading-6 text-white font-inter hover:text-[#FF9F0D] transition-colors">Sign In</Link>
