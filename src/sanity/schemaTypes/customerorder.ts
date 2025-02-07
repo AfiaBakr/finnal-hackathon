@@ -1,5 +1,5 @@
 // sanity/schemas/order.js
-export default {
+const customerOrderSchema ={
     name: 'customerorder',
     title: 'Customer Order',
     type: 'document',
@@ -68,3 +68,5 @@ export default {
       },
     ],
   };
+
+  export default customerOrderSchema;

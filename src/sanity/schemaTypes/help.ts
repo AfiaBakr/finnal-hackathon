@@ -1,5 +1,5 @@
 
-export default {
+const helpSchema= {
     name: 'help',
     title: 'Help',
     type: 'document',
@@ -38,3 +38,5 @@ export default {
       },
     ]
 }
+
+export default helpSchema
