@@ -129,7 +129,7 @@ export default async function ChefPage({ params }: ChefPageProps) {
                     Chef Detail
                 </h1>
                 <div className="flex items-center justify-center text-lg md:text-2xl">
-                    <Link href={"/menu"}>
+                    <Link href={"/chefs"}>
                         <h1 className="text-white">Our Chefs</h1>
                     </Link>
                     <MdKeyboardArrowRight className="text-white" />
