@@ -124,12 +124,12 @@ export default function FoodPage({ params }: FoodPageProps) {
                     <div >
                 <button
                     onClick={(e) => handleAddToCart(e, food!)} 
-                    className="w-[600px] h-12  bg-[#ff9f0d] hover:bg-orange-300 hover:text-black text-white rounded-lg font-bold px-28 md:px-52 mt-2 md:mt-2"
+                    className="w-[380px] md:w-[600px] h-12  bg-[#ff9f0d] hover:bg-orange-300 hover:text-black text-white rounded-lg font-bold px-28 md:px-52 mt-2 md:mt-2"
                 >
                     Add to Cart
                 </button>
                 <button
-              className="w-[600px] h-12  bg-[#ff9f0d] hover:bg-orange-300 hover:text-black text-white rounded-lg font-bold px-28 md:px-20 mt-2 md:mt-2"
+              className="w-[380px] md:w-[600px] h-12  bg-[#ff9f0d] hover:bg-orange-300 hover:text-black text-white rounded-lg font-bold px-20 md:px-20 mt-2 md:mt-2"
               onClick={() => router.push('/menu')}
             >
               Continue to Shopping
