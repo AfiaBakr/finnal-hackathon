@@ -1,7 +1,6 @@
 "use client";
 
-import react from "react";
-import { MdKeyboardArrowRight } from "react-icons/md";
+
 import Image from "next/image";
 
 
