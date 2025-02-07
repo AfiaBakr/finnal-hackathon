@@ -6,7 +6,6 @@ import { getCartItems } from "@/app/action/action";
 import Link from "next/link";
 import { Food } from "../type/food";
 import { urlFor } from "@/sanity/lib/image";
-import { CgChevronRight } from "react-icons/cg";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import toast from 'react-hot-toast'
 import { useRouter } from "next/navigation";
@@ -240,13 +239,15 @@ export default function CheckoutPage() {
                 <p className="text-sm text-red-500">Email is required.</p>
               )}
             </div>
+            <Link href={'/thankyou'}>
             <button
               className="w-full h-12 bg-[#FF9F0D] hover:bg-[#e2b46f] text-white hover:text-black"
-              onClick={(handlePlaceOrder)=> router.push('/thankyou')}
-              //  => router.push('/signin')}
+              onClick={handlePlaceOrder}
+                // => router.push('/thankyou')}             
             >
               Place Order
             </button>
+            </Link>
             <button
               className="w-full h-12 bg-[#FF9F0D] hover:bg-[#e2b46f] text-white hover:text-black"
               onClick={() => router.push('/menu')}
