@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import { SiNike } from "react-icons/si";
+
 // import { useHistory } from "react-router-dom"; // For navigation
 
 const Register = () => {
