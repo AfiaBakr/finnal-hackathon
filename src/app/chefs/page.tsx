@@ -15,7 +15,7 @@ type ChefName = {
     position: string;
     experience: number;
     specialty: string;
-    image: string;
+    imageUrl: string;
     description: string;
     available: boolean;
 };
@@ -31,7 +31,7 @@ type ChefName = {
         position: chefname.position, 
         experience: chefname.experience,
         specialty: chefname.specialty,
-        image: chefname.image,
+        imageUrl: chefname.imageUrl,
         description: chefname.description,
         available : chefname.available,
         
@@ -62,9 +62,9 @@ type ChefName = {
         
         <Link  className="border border-gray-300 py-2 rounded-lg shadow-sm flex flex-col items-center transition-transform transform hover:scale-105"
         href={`/chef/${chefname.slug.current}`}>
-         {chefname.image && (
+         {chefname.imageUrl && (
            <Image
-             src={urlFor(chefname.image).url()}
+             src={urlFor(chefname.imageUrl).url()}
              alt={chefname.name}
              width={500}
              height={500}
