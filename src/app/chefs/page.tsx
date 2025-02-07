@@ -62,13 +62,16 @@ type ChefName = {
         <Link  className="border border-gray-300 py-2 rounded-lg shadow-sm flex flex-col items-center transition-transform transform hover:scale-105"
         href={`/chef/${chefname.slug.current}`}>
          
-          <Image
-                      src={chefname.imageUrl}
-                      alt={chefname.name}
-                      width={500}
-                      height={500}
-                      className="w-80 h-80 object-cover rounded-md mb-2 md:mb-4" />
-                      <h2 className="text-xl font-semibold text-center mb-2">{chefname.name}</h2>
+          {chefname.image && (
+           <Image
+             src={urlFor(chefname.image).url()}
+             alt={chefname.name}
+             width={500}
+             height={500}
+             className="w-80 h-80 object-cover rounded-md mb-2 md:mb-4"
+           />
+         )}
+         <h2 className="text-xl font-semibold text-center mb-2">{chefname.name}</h2>
   </Link>
                 {/* <p className="text-gray-500 text-center mb-2">{chefname.position}</p>
             <p className="text-lg font-bold text-center">Experience: {chefname.experience} Years</p>
