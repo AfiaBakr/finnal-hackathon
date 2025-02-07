@@ -97,7 +97,7 @@ import Link from "next/link";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 interface ChefPageProps {
-    params: { slug: string };
+    params: Promise<{ slug: string }>;
 }
 
 async function getChef(slug: string): Promise<chef> {
@@ -117,8 +117,9 @@ async function getChef(slug: string): Promise<chef> {
 }
 
 export default async function ChefPage({ params }: ChefPageProps) {
-    const chef = await getChef(params.slug);
-    
+    const slug = (await params).slug; // Await params to extract slug
+    const chef = await getChef(slug);
+
     return (
         <main className="border border-spacing-1 bg-slate-100 md:mx-20 md:mt-20 md:mb-10 mx-4 mt-8 mb-4 p-8 rounded-2xl">
             <header
@@ -162,6 +163,5 @@ export default async function ChefPage({ params }: ChefPageProps) {
         </main>
     );
 }
-
 
 
