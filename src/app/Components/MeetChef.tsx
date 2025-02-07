@@ -7,9 +7,9 @@ import Link from "next/link";
 
 const items = [
     { id: 1, img: "/meet chef/Chef card.png", title: "D.Estwood", lable: "Chief Chef" },
-    { id: 2, img: "/meet chef/card 4.png", title: "D.Scoriesh", lable: "Assistant Chef" },
+    { id: 2, img: "/meet chef/Card 4.png", title: "D.Scoriesh", lable: "Assistant Chef" },
     { id: 3, img: "/meet chef/Rectangle 8863.png", title: "M. William", lable: "Advertising Chef" },
-    { id: 4, img: "/meet chef/card 3.png", title: "W.Readfroad", lable: "Specialist" },
+    { id: 4, img: "/meet chef/Card 3.png", title: "W.Readfroad", lable: "Specialist" },
   ];
 
 
