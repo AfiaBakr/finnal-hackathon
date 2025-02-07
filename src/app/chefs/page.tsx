@@ -1,20 +1,21 @@
 
+import { urlFor } from "@/sanity/lib/image";
 import { sanityFetch } from "@/sanity/lib/live";
 import { allchefs } from "@/sanity/lib/quaries";
-import chefs from "@/sanity/schemaTypes/chefs";
 import Image from "next/image";
 import Link from "next/link";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 // Define the Item type to describe each food item
 type ChefName = {
+    
     _id: string;
     name: string;
     slug: { current: string };
     position: string;
     experience: number;
     specialty: string;
-    imageUrl: string;
+    image: string;
     description: string;
     available: boolean;
 };
@@ -23,14 +24,14 @@ type ChefName = {
     const response = await sanityFetch({ query: allchefs });
     
   const chef: ChefName[] = 
-    response.data?.map((chefname: any) => ({
+    response.data?.map((chefname: ChefName) => ({
         _id: chefname._id,
         name: chefname.name,
         slug: chefname.slug,
-        position: chefname.positon, 
+        position: chefname.position, 
         experience: chefname.experience,
         specialty: chefname.specialty,
-        imageUrl: chefname.imageUrl,
+        image: chefname.image,
         description: chefname.description,
         available : chefname.available,
         
@@ -61,8 +62,7 @@ type ChefName = {
         
         <Link  className="border border-gray-300 py-2 rounded-lg shadow-sm flex flex-col items-center transition-transform transform hover:scale-105"
         href={`/chef/${chefname.slug.current}`}>
-         
-          {chefname.image && (
+         {chefname.image && (
            <Image
              src={urlFor(chefname.image).url()}
              alt={chefname.name}
@@ -72,7 +72,8 @@ type ChefName = {
            />
          )}
          <h2 className="text-xl font-semibold text-center mb-2">{chefname.name}</h2>
-  </Link>
+          
+          </Link>
                 {/* <p className="text-gray-500 text-center mb-2">{chefname.position}</p>
             <p className="text-lg font-bold text-center">Experience: {chefname.experience} Years</p>
             <p className="text-lg font-bold text-center">{chefname.specialty}</p>
